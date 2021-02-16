@@ -5,15 +5,7 @@
 # without any remainder.
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
-import math
-
-def is_prime (number):
-    #to check if a number is prime we dont need to check if it is divided by all number - 1
-    #we only need to check until sqrt
-    for i in range (2, int(math.ceil(math.sqrt(number))) + 1):
-        if (number % i == 0):
-            return False
-    return True
+from utils import is_prime
 
 def prime_factorization (number):
     factors        = {}
@@ -51,6 +43,6 @@ def smallest_evenly_divisible(numbers):
 #all numbers divisible by 18 are also divisible by 3, 6
 #all numbers divisible by 16 are also divisible by 8
 #all numbers divisible by 14 are also divisible by 7
-numbers = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 #numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(smallest_evenly_divisible(numbers))
